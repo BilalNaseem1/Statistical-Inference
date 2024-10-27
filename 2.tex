@@ -1,0 +1,129 @@
+% \begin{important}
+%     This section is for important notes or remarks to highlight key points.
+% \end{important}
+
+% \note{ljlkj}
+\subsection{Discrete Random Variables}
+Let $X$ be a random variable. Before a coin is flipped, the value of $X$ is unknown. It's waiting on the results of the experiment involving randomness.
+
+\mybox{Random Variables}{red}{
+    A random variable is a mapping from the set of outcomes of an experiment involving probability to the set of real numbers.
+}
+It is convention to use capital letters when talking about random variables.
+
+\begin{equation}
+    X=\begin{cases}1, \quad \text{if Heads} \\
+        0, \quad \text{if Tails}\end{cases}
+\end{equation}
+
+Since random variables talk about probability, we can say that:
+
+\begin{equation}
+    X = \begin{cases}
+        \vspace{0.25cm} 1 \quad \text{with probability } \dfrac{1}{2} \\
+        \vspace{0.25cm} 0 \quad \text{with probability } \dfrac{1}{2}
+    \end{cases}
+\end{equation}
+
+And a better way to write this would be as a function:
+
+\begin{equation}
+    f(x) = P(X=x) = \begin{cases}
+        \vspace{0.3cm} \dfrac{1}{2}, & \text{if } x = 0 \\
+        \vspace{0.3cm} \dfrac{1}{2}, & \text{if } x = 1 \\
+        0,                           & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+This is known as a probability mass function (pmf) and is denoted by $f(x)$. When we have multiple random variables, we use subscripts to distinguish them for e.g. $f_X(x)$, $f_Y(y)$.
+
+The pmf tells us how the probabilities of different outcomes of a random variable are distributed. The below image shows the pmf of a fair coin. Since we are plotting density, the total area of each bar is the probability of that outcome.
+
+\insertimage{0.6}{image-2.png}
+
+\subsubsection{Bernoulli Distribution}
+
+We can generalize that if the probability of getting heads is $p$ and the probability of getting tails is $q = 1-p$, the pmf becomes:
+
+\begin{equation}
+    f(x) = P(X=x) = \begin{cases}
+        \vspace{0.1cm} 1-p, & \text{if } x = 0 \\
+        \vspace{0.1cm} p,   & \text{if } x = 1 \\
+        0,                  & \text{otherwise}
+    \end{cases}
+\end{equation}
+This model depends on the parameter $p$. This random variable is so common, it gets a name i.e. \textbf{Bernoulli Random Variable or Distribution with parameter $p$}.
+
+We can write any distribution in short hand as follows:
+
+\begin{equation}
+    X \sim \text{Bernoulli}(p)
+\end{equation}
+
+\subsubsection{Indicator function}
+
+Let $A$ be a set of real numbers. The Indicator function indicates if a number is in the set or not.
+
+\begin{equation}
+    I_A(x) = \begin{cases}
+        1, \quad \text{if } x \in A \\
+        0, \quad \text{otherwise}
+    \end{cases}
+\end{equation}
+
+with this Indicator function, we can say that $X$ is a random variable that takes on only two values, 0 and 1. With this Indicator function we can write the Bernoulli probability mass function (pmf) as:
+
+\begin{equation}
+    P(X=x) = p^x(1-p)^{1-x} \cdot I_{\{0,1\}}(x)
+\end{equation}
+
+We re-wrote the pmf as equation 7 because it is more concise as compared to equation 4. If x is not in set $\{0,1\}$, the pmf is 0. Indicator function are also helpful in proving proofs.
+
+
+\subsubsection{Geometric Distribution}
+
+The geometric distribution models the number of trials needed to get the first success in a sequence of independent Bernoulli trials with a success probability \( p \). In other words, if \( X \) represents the number of trials until the first success, then \( X \) follows a geometric distribution with parameter \( p \).
+
+\begin{equation}
+    X \sim \text{Geometric}(p)
+\end{equation}
+
+Conditions:
+\begin{itemize}
+    \item Repeated independent Bernoulli trials
+    \item Only 2 outcomes: 0 and 1
+\end{itemize}
+
+\subsubsection*{Derivation of the Probability Mass Function (PMF)}
+Considering $P(X=4)$. For this, we need our first success to be on the 4th trial. We need \textbf{F}, \textbf{F}, \textbf{F}, and then \textbf{S}.
+
+$$
+    P(X=4) = (1-p) \cdot (1-p) \cdot (1-p) \cdot p \\
+    = (1-p)^3 p
+$$
+
+
+\subsubsection*{General Formula of the Geometric Distribution}
+In general, we can say that the first success is on the \( X^{th} \) trial, meaning we will have \( X-1 \) failures. So we can write the general formula of the geometric distribution as:
+
+$$
+    P(X = x) = (1 - p)^{x-1} p \hspace{2cm} \text{for } x = 1, 2, 3, \ldots
+$$
+$$
+    P(X = x) = 0 \hspace{3.3cm} \text{for other values of } x
+$$
+We can use the Indicator function to write as a single general formula"
+
+\begin{equation}
+    P(X = x) = (1 - p)^{x-1} p \cdot I_{\{1,2,3, \ldots\}}(x)
+\end{equation}
+
+\subsubsection*{Plot of the Geometric Distribution}
+The minimum value of \( X \) is 1 and there is no maximum value. The mode is always 1. As we move towards the right, the probabilities decrease.
+
+\important{
+    incomplete: exponentiol, binomial etc. graphs
+}
+
+\subsection{Continuous Random Variables}
+sd

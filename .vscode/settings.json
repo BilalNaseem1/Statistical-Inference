@@ -15,5 +15,7 @@
     ],
     "cSpell.words": [
         "connectionist",
-    ]
+    ],
+    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.path": "${currentFileDir}"
 }
