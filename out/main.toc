@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Introduction to Inference}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Population Mean $\mu $ and Sample Mean $\bar {X}$}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Review of Random Variables}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Discrete Random Variables}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Bernoulli Distribution}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Indicator function}{5}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Geometric Distribution}{5}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Continuous Random Variables}{6}{subsection.2.2}%
